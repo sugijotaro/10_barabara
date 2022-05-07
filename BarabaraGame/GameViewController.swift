@@ -58,6 +58,21 @@ class GameViewController: UIViewController {
         }
         resultLabel.text = "Score: \(score)"
         resultLabel.isHidden = false
+        
+        let highScore1: Int = defaults.integer(forKey: "score1")
+        let highScore2: Int = defaults.integer(forKey: "score2")
+        let highScore3: Int = defaults.integer(forKey: "score3")
+        
+        if score > highScore1{
+            defaults.set(score, forKey: "score1")
+            defaults.set(highScore1, forKey: "score2")
+            defaults.set(highScore2, forKey: "score3")
+        }else if score > highScore2{
+            defaults.set(score, forKey: "score2")
+            defaults.set(highScore2, forKey: "score3")
+        }else if score > highScore3{
+            defaults.set(score, forKey: "score3")
+        }
     }
     
     @IBAction func retry(){

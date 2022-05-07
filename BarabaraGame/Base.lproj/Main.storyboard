@@ -172,10 +172,10 @@
             </objects>
             <point key="canvasLocation" x="711.59420289855075" y="83.705357142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Ranking View Controller-->
         <scene sceneID="LUs-Bt-VL6">
             <objects>
-                <viewController id="fvd-I0-rHR" sceneMemberID="viewController">
+                <viewController id="fvd-I0-rHR" customClass="RankingViewController" customModule="BarabaraGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Xp-a7-zTO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -188,6 +188,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="TOPへ">
                                     <fontDescription key="titleFontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="toTop" destination="fvd-I0-rHR" eventType="touchUpInside" id="HtH-Oh-4zf"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ランキング" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojm-bE-AUa">
                                 <rect key="frame" x="132" y="119.5" width="150" height="30"/>
@@ -275,6 +278,11 @@
                             <constraint firstItem="RAC-r0-w4c" firstAttribute="width" secondItem="2Xp-a7-zTO" secondAttribute="width" multiplier="0.4" id="yMS-e2-vLs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="rankingLabel1" destination="Fc1-8L-7SA" id="NYm-LB-SiK"/>
+                        <outlet property="rankingLabel2" destination="XWi-wl-8DB" id="Vsw-Sp-a0i"/>
+                        <outlet property="rankingLabel3" destination="XTa-XT-wea" id="LdH-WP-46r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eTS-Ay-iI0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
